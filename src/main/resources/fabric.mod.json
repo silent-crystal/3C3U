@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "name": "3C3U生存端",
+  "id": "meteor-client",
+  "version": "0.5.8",
+  "description": "此改版可能与部分Addon不兼容",
+  "authors": [
+    "Silent_Crystal"
+  ],
+  "contact": {
+    "homepage": "https://mioclient.me",
+    "issues": "https://github.com/MeteorDevelopment/meteor-client/issues",
+    "sources": "https://github.com/MeteorDevelopment/meteor-client",
+    "discord": "https://rusherhack.org"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/meteor-client/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "meteordevelopment.meteorclient.MeteorClient"
+    ]
+  },
+  "mixins": [
+    "meteor-client.mixins.json",
+    "meteor-client-baritone.mixins.json",
+    "meteor-client-indigo.mixins.json",
+    "meteor-client-sodium.mixins.json",
+    "meteor-client-lithium.mixins.json",
+    "meteor-client-viafabricplus.mixins.json"
+  ],
+  "accessWidener": "meteor-client.accesswidener",
+  "custom": {
+    "meteor-client:devbuild": "${devbuild}",
+    "meteor-client:color": "255,0,0",
+    "meteor-client:commit": "${commit}",
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://futureclient.cc"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": ["1.21.1"],
+    "fabricloader": ">=${loader_version}"
+  },
+  "breaks": {
+    "optifabric": "*",
+    "feather": "*",
+    "origins": "*",
+    "wurst": "*",
+    "sodium": "<0.5.8",
+    "morechathistory": "*",
+    "modernui": "*",
+    "iris": "*"
+  }
+}
